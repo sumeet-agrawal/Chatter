@@ -2,8 +2,14 @@
 
 {% block title %}Home{% endblock %}
 {% block content %}
-<h1>TEST</h1>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="{{url_for('static', filename='index.js')}}" type="text/javascript"></script>
-<button type="button" id="test" class="btn btn-primary btn-lg">Base class</button>
+
+<p id="prevMsg"></p>
+
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Message" aria-label="Message" aria-describedby="Message" id="msg">
+    <button class="btn btn-outline-secondary" type="button" id="sendBtn">Send</button>
+</div>
 {% endblock %}
