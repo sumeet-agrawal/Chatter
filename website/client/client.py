@@ -1,7 +1,5 @@
 from socket import socket, AF_INET, SOCK_STREAM
 from threading import Thread, Lock
-import time
-
 
 class Client:
 
@@ -43,6 +41,7 @@ class Client:
         self.client_socket.send(bytes(msg, "utf8"))
         if msg == "{quit}":
             self.client_socket.close()
+        
 
     
     def get_messages(self) -> []:
