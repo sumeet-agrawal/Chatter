@@ -38,9 +38,12 @@ class Client:
         """
         Send messages to server
         """
-        self.client_socket.send(bytes(msg, "utf8"))
-        if msg == "{quit}":
-            self.client_socket.close()
+        try:
+            self.client_socket.send(bytes(msg, "utf8"))
+            if msg == "{quit}":
+                self.client_socket.close()
+        except Exception as e:
+            print("[EXCEPTION]", e)
         
 
     
