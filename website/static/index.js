@@ -19,6 +19,6 @@ function update() {
         }).then(function(text) {
             console.log(text.length)
             if(text.length > 3)
-                document.getElementById("prevMsg").innerHTML += text
+                document.getElementById("prevMsg").innerHTML += text + "<br >"
         })    
 }
